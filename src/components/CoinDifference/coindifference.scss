@@ -1,0 +1,28 @@
+.coin-difference {
+    display: flex;
+    align-items: center;
+
+    // .coin-difference__number
+
+    &__number {
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 140%;
+        color: #00D154;
+        padding: 2px 8px;
+        background: rgba(0, 209, 84, 0.1);
+        border-radius: 16px;
+        margin: 0px 4px 0px 0px;
+    }
+
+    // .coin-difference__down
+
+    &__down {
+        background: rgba(241, 59, 1, 0.1);
+        color: #F13B01;
+    }
+
+    // .coin-difference__arrow
+
+    &__arrow {}
+}

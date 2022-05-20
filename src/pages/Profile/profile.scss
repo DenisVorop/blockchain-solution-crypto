@@ -1,0 +1,100 @@
+.profile {
+
+    // .profile__container
+
+    &__container {}
+
+    // .profile__body
+
+    &__body {
+        padding: 30px 60px;
+    }
+
+    // .profile__balance
+
+    &__balance {
+        margin: 0px 0px 40px 0px;
+    }
+
+    // .profile__summary
+
+    &__summary {
+        margin: 0px 0px 48px 0px;
+    }
+
+    // .profile__purse
+
+    &__purse {}
+}
+
+.balance-profile {
+
+    // .balance-profile__label
+
+    &__label {
+        font-weight: 400;
+        font-size: 18px;
+        line-height: 140%;
+        margin: 0px 0px 8px 0px;
+    }
+
+    // .balance-profile__amount
+
+    &__amount {
+        display: flex;
+        align-items: center;
+    }
+
+    // .balance-profile__total
+
+    &__total {
+        font-weight: 700;
+        font-size: 36px;
+        line-height: 120%;
+        margin: 0px 30px 0px 0px;
+    }
+
+    // .balance-profile__difference
+
+    &__difference {}
+}
+
+.summary-profile {
+
+    // .summary-profile__label
+
+    &__label {
+        font-weight: 600;
+        font-size: 18px;
+        line-height: 120%;
+        margin: 0px 0px 24px 0px;
+    }
+
+    // .summary-profile__chart
+
+    &__chart {
+        box-shadow: 0px 4px 12px rgba(4, 32, 36, 0.1);
+        border-radius: 24px;
+        padding: 24px;
+        width: fit-content;
+    }
+}
+
+.purse-profile {
+    display: flex;
+
+    // .purse-profile__wallet
+
+    &__wallet {
+        margin: 0px 30px 0px 0px;
+    }
+
+    // .purse-profile__label
+
+    &__label {
+        font-weight: 600;
+        font-size: 18px;
+        line-height: 120%;
+        margin: 0px 0px 8px 0px;
+    }
+}

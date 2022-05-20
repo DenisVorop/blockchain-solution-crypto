@@ -1,0 +1,17 @@
+.wrapper {
+    min-height: 100%;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    background-color: #FCFEFE;
+
+    >main {
+        flex: 1 1 auto;
+    }
+}
+
+[class*="__container"] {
+    max-width: 1440px;
+    box-sizing: content-box;
+    margin: 0 auto;
+}

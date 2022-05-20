@@ -1,0 +1,33 @@
+.block-error {
+    color: #F13B01;
+    background-color: #FFFFFF;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 24px;
+    font-size: 18px;
+    padding: 32px;
+}
+
+.error-body {
+    transform: scale(0);
+    transition: all 0.3s ease 0s;
+}
+
+.error-visible {
+    transform: scale(1);
+    transition: all 0.3s ease 0s;
+}
+
+.error {
+    position: absolute;
+    height: 100vh;
+    width: 100vw;
+    top: 0;
+    left: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #0211135c;
+    transition: all 0.3s ease 0s;
+}

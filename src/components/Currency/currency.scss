@@ -1,0 +1,100 @@
+.currency {
+
+    // .currency__container
+
+    &__container {}
+
+    // .currency__body
+
+    &__body {}
+
+    // .currency__rows
+
+    &__rows {
+        margin: 0px 0px 32px 0px;
+    }
+
+    // .currency__row
+
+    &__row {
+        &:not(:last-child) {
+            margin: 0px 0px 8px 0px;
+        }
+    }
+}
+
+.row-currency {
+
+    // .row-currency__label
+
+    &__label {
+        font-weight: 400;
+        font-size: 12px;
+        line-height: 140%;
+    }
+
+    // .row-currency__body
+
+    &__body {
+        display: flex;
+        align-items: center;
+    }
+
+    // .row-currency__enter
+
+    &__enter {
+        display: flex;
+        align-items: center;
+        background: #FFFFFF;
+        border: 1px solid #C5EAEF;
+        border-radius: 16px;
+        padding: 4px;
+        flex: 1 0 auto;
+        margin: 0px 7px 0px 0px;
+    }
+
+    // .row-currency__select
+
+    &__select {
+
+        select {
+            width: 40px;
+        }
+
+        img {
+            margin: 0px 0px 0px -10px;
+            pointer-events: none;
+            width: 12px;
+            height: 6px;
+        }
+    }
+
+    // .row-currency__input
+
+    &__input {
+        flex: 1 0 auto;
+
+        input {
+            height: 25px;
+            width: -webkit-fill-available;
+            padding: 0px 20px 0px 0px;
+        }
+    }
+
+    // .row-currency__button
+
+    &__button {
+        &:disabled {
+            opacity: 0.5;
+        }
+    }
+}
+
+.ellipse {
+    background: #EFF8F9;
+    border-radius: 16px;
+    padding: 4px 8px;
+    margin: 0px 16px 0px 0px;
+    display: flex;
+    align-items: center;
+}
