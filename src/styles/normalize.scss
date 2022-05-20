@@ -87,8 +87,13 @@ select {
   -webkit-appearance: none;
   -moz-appearance: none;
   background: inherit;
+  color: inherit;
 }
 
 select::-ms-expand {
   display: none;
+}
+
+*::placeholder {
+  color: #C5EAEF;
 }

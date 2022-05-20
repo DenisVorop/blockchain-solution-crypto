@@ -17,4 +17,5 @@ export type TDeal = {
     profit: number
     proportion: number
     value: number
+    actualPrice: number
 }

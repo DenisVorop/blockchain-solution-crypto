@@ -27,6 +27,7 @@ const Profile: React.FC<ProfileProps> = ({ allCoins }) => {
         profit: 0,
         proportion: 0.17241379,
         value: 5000,
+        actualPrice: +actualBtcPrice!,
     }])
     const [btcClosedDeals, setBtcClosedDeals] = React.useState<TDeal[]>([])
     // -- ETH
@@ -42,6 +43,7 @@ const Profile: React.FC<ProfileProps> = ({ allCoins }) => {
         profit: 0,
         proportion: 1,
         value: 2000,
+        actualPrice: +actualEthPrice!,
     }])
     const [ethClosedDeals, setEthClosedDeals] = React.useState<TDeal[]>([])
     // -- BUSD
@@ -81,6 +83,8 @@ const Profile: React.FC<ProfileProps> = ({ allCoins }) => {
     React.useEffect(() => {
         btcBuyDeals.forEach(deal => deal.profit = +((actualBtcPrice! - deal.open!) * deal.proportion).toFixed(2)) // Профит от сделки в покупку BTC
         ethBuyDeals.forEach(deal => deal.profit = +((actualEthPrice! - deal.open!) * deal.proportion).toFixed(2)) // Профит от сделки в покупку ETH
+        btcBuyDeals.forEach(deal => deal.actualPrice = actualBtcPrice!) // Актуальная стоимость BTC
+        ethBuyDeals.forEach(deal => deal.actualPrice = actualEthPrice!) // Актуальная стоимость ETH
     }, [actualBtcBalance, actualBtcPrice, actualEthPrice, btcBuyDeals, ethBuyDeals])
 
     const openDeal = (coin: string, value: number) => {
@@ -105,6 +109,7 @@ const Profile: React.FC<ProfileProps> = ({ allCoins }) => {
                 profit: 0,
                 proportion: proportionBtc,
                 value: value,
+                actualPrice: +actualBtcPrice!,
             }
             setBtcBuyDeals([...btcBuyDeals, deal])
             setBtcBalance(prev => +(prev + value).toFixed(2)) // Баланс BTC
@@ -125,6 +130,7 @@ const Profile: React.FC<ProfileProps> = ({ allCoins }) => {
                 profit: 0,
                 proportion: proportionEth,
                 value: value,
+                actualPrice: +actualEthPrice!,
             }
             setEthBuyDeals([...ethBuyDeals, deal])
             setEthBalance(prev => +(prev + value).toFixed(2)) // Баланс ETH

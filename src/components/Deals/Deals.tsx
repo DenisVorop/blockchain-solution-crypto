@@ -37,11 +37,11 @@ const Deals: React.FC<DealsProps> = ({ btcBuyDeals, ethBuyDeals, closeDeal }) =>
                                         <div className="row-deal__bt">
                                             <div className="row-deal__value">{deal.open}</div>
                                             <img src={arrowR} alt="arrow" />
-                                            <div className="row-deal__actual-value">434343</div>
+                                            <div className="row-deal__actual-value">{deal.actualPrice}</div>
                                         </div>
                                     </div>
                                     <div className="row-deal__end">
-                                        <div className={cn('row-deal__profit', {'profit-down': deal.profit < 0})}>{deal.profit}</div>
+                                        <div className={cn('row-deal__profit', {'profit-down': deal.profit < 0})}>{deal.profit} $</div>
                                         <div className="row-deal__close" onClick={() => closeDeal(deal)}>
                                             <img src={close} alt="close position" />
                                         </div>
