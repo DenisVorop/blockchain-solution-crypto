@@ -1,4 +1,3 @@
-/* eslint-disable react-hooks/exhaustive-deps */
 import React from 'react'
 
 import CoinDifference from '../../components/CoinDifference/CoinDifference'
@@ -59,8 +58,9 @@ const Profile: React.FC<ProfileProps> = ({ allCoins }) => {
     const [visibleError, setVisibleError] = React.useState<boolean>(false)
 
     React.useEffect(() => {
-        // eslint-disable-next-line no-sequences
-        setTimeout(() => (setError(''), setVisibleError(false)), 2000)
+        if (error)
+            // eslint-disable-next-line no-sequences
+            setTimeout(() => (setError(''), setVisibleError(false)), 2000)
     }, [error])
 
     React.useEffect(() => {
