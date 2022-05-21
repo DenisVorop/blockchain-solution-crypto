@@ -33,6 +33,11 @@ const RowCurrency: React.FC<RowCurrencyProps> = ({ label, action }) => {
         setSelectValue(e.target.value)
     }
 
+    const handleDeal = () => {
+        action!(selectValue, +currencyValue)
+        setCurrencyValue('')
+    }
+
     return (
         <div className="currency__row row-currency">
             <div className="row-currency__label">{label}</div>
@@ -54,7 +59,7 @@ const RowCurrency: React.FC<RowCurrencyProps> = ({ label, action }) => {
                         <input
                             type="number"
                             placeholder="$ Enter amount"
-                            value={currencyValue}
+                            value={buttonLabel === 'Buy' ? currencyValue : ''}
                             onChange={(e) => handleInputChange(e)}
                         />
                     </div>
@@ -62,7 +67,7 @@ const RowCurrency: React.FC<RowCurrencyProps> = ({ label, action }) => {
                 <button
                     className="row-currency__button"
                     disabled={disabledButton}
-                    onClick={() => action!(selectValue, +currencyValue)}
+                    onClick={handleDeal}
                 >
                     <LocalActionButton label={buttonLabel} />
                 </button>

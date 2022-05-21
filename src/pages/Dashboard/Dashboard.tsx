@@ -1,3 +1,4 @@
+/* eslint-disable react-hooks/exhaustive-deps */
 import React from 'react'
 
 import Coin from '../../components/Coin/Coin'
@@ -25,7 +26,6 @@ const Dashboard: React.FC<DashboardProps> = ({ allCoins }) => {
     React.useEffect(() => {
         const choiceCoin: TCoin[] = allCoins?.filter(coin => coin.name === selectedCoin?.name)
         setSelectedCoin(choiceCoin[0])
-    // eslint-disable-next-line react-hooks/exhaustive-deps
     }, [allCoins])
 
     return (

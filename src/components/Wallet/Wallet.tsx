@@ -41,7 +41,7 @@ const Wallet: React.FC<WalletProps> = (
                             </div>
                         </div>
                         <div className="wallet-tbody">
-                            {allCoins?.map(coin => (
+                            {allCoins.map(coin => (
                                 <WalletSwitchHoc
                                     key={coin.name}
                                     coin={coin}
