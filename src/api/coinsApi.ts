@@ -1,6 +1,6 @@
 import axios from 'axios'
 
-const REACT_APP_API_URL_GET_COINS = 'https://min-api.cryptocompare.com/data/top/totalvolfull?limit=3&tsym=USD'
+const REACT_APP_API_URL_GET_COINS = 'https://min-api.cryptocompare.com/data/top/totalvolfull?limit=10&tsym=USD'
 const REACT_APP_API_URL_CONVERT = 'https://min-api.cryptocompare.com/data'
 
 const $getCoins = axios.create({
